@@ -1,17 +1,19 @@
 # Coffee Machine Simulator
-The Coffee Machine is a Python simulation that emulates the functionality of a real-world coffee vending machine. It offers a selection of popular coffee drinks such as espresso, latte, and cappuccino. The program manages ingredient storage, processes coin transactions, calculates change, and updates sales records, all through a user-friendly command-line interface.
+This project simulates a real-world coffee machine through a command-line interface. The application is organized into several modules that handle different aspects of the coffee-making process, including drink selection (Menu), ingredient management (CoffeeMaker), and payment processing (MoneyMachine). The main module ties everything together to allow users to order drinks, check resource levels, view profit reports, and process payments until the machine is turned off.
 
 ## Features
 
-- **Multiple Drink Options:** Choose from espresso, latte, or cappuccino, each with its own ingredient requirements and price.
+- **Modular Design:** Organized into separate modules for menu management, resource handling, and money transactions.
 
-- **Resource Management:** Checks for sufficient ingredients before processing a purchase and deducts the necessary amounts upon a successful sale.
+- **Multiple Drink Options:** Order popular drinks such as latte, espresso, and cappuccino, each with specific ingredient requirements and pricing.
 
-- **Coin Processing:** Accepts coin inputs (quarters, dimes, nickels, and pennies) to calculate the total inserted amount and returns the appropriate change if needed.
+- **Resource Management:** Automatically checks if sufficient resources (water, milk, coffee) are available before processing an order.
 
-- **Reporting Functionality:** Generate a report displaying current storage levels for water, milk, coffee, and total money collected.
+- **Coin Processing:** Handles coin transactions, calculates change, updates profit, and refunds insufficient payments.
 
-- **Interactive Interface:** Use simple text commands to order drinks, check machine status, or turn the machine off.
+- **Reporting:** Provides reports on current ingredient levels and total profit.
+
+- **Interactive Interface:** Continuously prompts for user input, supporting commands like "report" and "off" to display status or shut down the machine.
 
 ## Installation
 
@@ -21,28 +23,37 @@ The Coffee Machine is a Python simulation that emulates the functionality of a r
 
 ### How to Run
 
-1. **Download the Code:** Clone the repository or download the `CoffeeMachine.py` file to your computer.
+1. **Download the Code:** Clone the repository or ensure you have all the following files in the same directory:
+
+   - `coffee_machine.py` (Main module)
+
+   - `coffee_maker.py` (Handles ingredient resources and coffee preparation)
+
+   - `menu.py` (Manages available drink options)
+
+   - `money_machine.py` (Processes coin transactions and tracks profit)
 
 2. **Open Terminal/Command Prompt:** Navigate to the directory containing the file.
 
 3. **Run the program:** Execute the following command:
 
     ```bash
-    python3 CoffeeMachine.py
+    python3 coffee_machine.py
     ```
 
 4. **Follow the Prompts:**
-   - **Order a Drink:** Type espresso, latte, or cappuccino when prompted to purchase a drink.
+   - **Order a Drink:** Type `espresso`, `latte`, or `cappuccino` when prompted to purchase a drink.
 
-   - **Check Resources:** Enter report to display the current levels of ingredients and money.
+   - **Check Resources:** Enter `report` to display the current levels of ingredients and money.
 
-   - **Turn Off the Machine:** Enter off to shut down the simulation.
+   - **Turn Off the Machine:** Enter `off` to shut down the simulation.
 
-5. **Coin Input:** If purchasing a drink, follow the prompts to insert coins. The machine will process your coins, calculate change if necessary, and update the internal storage.
+   - **Payment Process:** Follow the prompts to insert coins. The machine will process your coins, return change if necessary, and prepare your drink if sufficient resources are available.
+
 
 ## Demo
-![Coffee Machine Simulator Demo](https://i.imgur.com/tGa6Im6.gif)
-[Coffee Machine Simulator Demo](https://i.imgur.com/tGa6Im6.gif)
+![Coffee Machine Simulator Demo](https://i.imgur.com/giCAAXt.gif)
+[Coffee Machine Simulator Demo](https://i.imgur.com/giCAAXt.gif)
 
 ## License
 
